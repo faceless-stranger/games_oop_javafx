@@ -2,11 +2,11 @@ package ru.job4j.puzzle;
 
 public class Win {
     public static boolean check(int[][] board) {
-        boolean rsl = vreticalWIn(board) || horizontalWIn(board);
+        boolean rsl = vWIn(board) || horizontalWIn(board);
         return rsl;
     }
 
-    public static boolean vreticalWIn(int[][] board) {
+    public static boolean vWIn(int[][] board) {
         boolean vertical = true;
         for (int i = 0; i < board.length; i++) {
             if (board[i][i] == 1) {
@@ -21,7 +21,7 @@ public class Win {
     }
 
     public static boolean horizontalWIn(int[][] board) {
-        boolean horiz = true;
+        boolean h = true;
         for (int i = 0; i < board.length; i++) {
             if (board[i][i] == 1) {
                 for (int j = 0; j < board.length; j++) {
@@ -31,7 +31,7 @@ public class Win {
                 }
             }
         }
-        return horiz;
+        return h;
     }
     public static void main(String[] args) {
         int[][] board = {
@@ -41,6 +41,5 @@ public class Win {
                 {0, 0, 1, 0, 0},
                 {0, 0, 1, 0, 0},
         };
-        System.out.println(vreticalWIn(board));
     }
 }
