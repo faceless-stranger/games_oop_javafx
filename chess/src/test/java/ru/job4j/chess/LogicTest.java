@@ -7,8 +7,6 @@ import ru.job4j.chess.firuges.black.BishopBlack;
 import static org.junit.Assert.*;
 import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-
-
 public class LogicTest {
 
     @Test
@@ -40,6 +38,4 @@ public class LogicTest {
         });
         assertThat(exception.getMessage()).isNull();
     }
-
-
 }
